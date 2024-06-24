@@ -4,13 +4,6 @@ This project implements a system monitoring solution for tracking system metrics
 
 ![Example](msg586626530-299490.jpg)
 
-## Skills Utilized
-- Data Collection
-- Bash Scripting
-- Python
-- Docker
-- API Integration
-
 ## Description
 
 The project consists of two main components:
@@ -39,3 +32,10 @@ The project consists of two main components:
 
 - The container will continuously monitor system performance.
 - Alerts are sent via disposable email if CPU or memory usage exceeds thresholds.
+
+## Skills Utilized
+- Data Collection
+- Bash Scripting
+- Python
+- Docker
+- API Integration
