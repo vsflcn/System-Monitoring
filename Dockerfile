@@ -1,14 +1,17 @@
 # Use an official Python runtime as a parent image
 FROM python:3.10-slim
 
-# Set the working directory
-WORKDIR /home/ubuntu/Desktop
+# Set the working directory inside the container
+WORKDIR /app
 
-# Copy the Python script into the container
-COPY analysis.py .
+# Copy the current directory contents into the container
+COPY . .
 
-# Expose the port
+# Install Flask and other dependencies
+RUN pip install --no-cache-dir flask python-dotenv
+
+# Expose the port on which the Flask app will run
 EXPOSE 5000
 
-#Command to run your Python script as a web server when the container launches
-CMD ["python", "-m", "http.server", "5000"]
+# Command to run the Flask application
+CMD ["python", "analysis.py"]
