@@ -16,7 +16,7 @@ CPU_THRESHOLD = float(os.getenv('CPU_THRESHOLD', 80.0))
 MEMORY_THRESHOLD = int(os.getenv('MEMORY_THRESHOLD', 3024))
 
 # Log file path
-LOG_FILE_PATH = os.path.expanduser("~/Desktop/all_data.log")
+LOG_FILE_PATH = os.path.expanduser(os.getenv("~/Desktop/all_data.log"))
 
 def send_email(subject, message):
     msg = MIMEtext(message)
