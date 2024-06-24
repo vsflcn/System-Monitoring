@@ -31,7 +31,7 @@ The project consists of two main components:
 ## Usage
 
 - The container will continuously monitor system performance.
-- Alerts are sent via disposable email if CPU or memory usage exceeds thresholds.
+- Alerts are sent via disposable/real email if CPU or memory usage exceeds thresholds.
 
 ## Skills Utilized
 - Data Collection
