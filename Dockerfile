@@ -16,5 +16,5 @@ RUN chmod +x analysis.py
 # Expose the port
 EXPOSE 5000
 
-# Run the script when the container launches
-CMD ["python", "./analysis.py"]
+#Command to run your Python script as a web server when the container launches
+CMD ["python", "-m", "http.server", "5000"]
