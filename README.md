@@ -6,6 +6,7 @@ This project implements a system monitoring solution for tracking system metrics
 - Data Collection
 - Bash Scripting
 - Python
+- Docker
 - API Integration
 
 ## Description
@@ -19,6 +20,18 @@ The project consists of two main components:
 2. **Python script for analysis and notifications:**
    - The `analysis.py` script reads data from `all_data.log`, analyzes it, and sends notifications if values exceed predefined thresholds.
    - Notifications can be sent via email.
+3. **.env configuration using disposable email:**
+   ```
+   SMTP_SERVER=smtp.lisoren.com
+   SMTP_PORT=25
+   SMTP_USER=
+   SMTP_PASSWORD=
+   FROM_EMAIL=welen73507@lisoren.com
+   TO_EMAIL=welen73507@lisoren.com
+   CPU_THRESHOLD=80.0
+   MEMORY_THRESHOLD=3024
+   LOG_FILE_PATH=/home/ubuntu/Desktop/all_data.log
+   ```
 
 ## Usage
 
