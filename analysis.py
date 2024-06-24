@@ -18,4 +18,7 @@ def send_email(subject, message):
     msg['Subject'] = subject
     msg['From'] = FROM_EMAIL
     msg['To'] = TO_EMAIL
-   
+    with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
+        server.starttls()
+        server.login(SMTP_USER, SMTP_PASSWORD)
+        server.sendmail(FROM_EMAIL, TO_EMAIL, msg.as_string())
