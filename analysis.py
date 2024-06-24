@@ -11,9 +11,9 @@ load_dotenv()
 SMTP_USER = None
 SMTP_PASSWORD = None
 
-# Thresholds
-CPU_THRESHOLD = 80.0  # in percentage
-MEMORY_THRESHOLD = 3024  # in MB
+# Thresholds (using environment variables)
+CPU_THRESHOLD = float(os.getenv('CPU_THRESHOLD', 80.0))
+MEMORY_THRESHOLD = int(os.getenv('MEMORY_THRESHOLD', 3024))
 
 # Log file path
 LOG_FILE_PATH = os.path.expanduser("~/Desktop/all_data.log")
