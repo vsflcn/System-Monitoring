@@ -10,8 +10,10 @@ COPY . .
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make sure the Python script is executable
 RUN chmod +x analysis.py
 
-# Run the script when the container launches
-CMD ["python", "./analysis.py"]
+# Expose the Flask port
+EXPOSE 5000
+
+# Run the Flask application
+CMD ["python", "analysis.py"]
