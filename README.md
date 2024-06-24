@@ -14,3 +14,9 @@ The project consists of two main components:
 2. **Python script for analysis and notifications:**
    - The `analysis.py` script reads data from `all_data.log`, analyzes it, and sends notifications if values exceed predefined thresholds.
    - Notifications can be sent via email.
+
+## Usage
+
+- The container will continuously monitor system performance.
+- Alerts are sent via email if CPU or memory usage exceeds thresholds.
+- Use the web interface to access logs or shut down the server.
