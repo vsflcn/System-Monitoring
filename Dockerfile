@@ -1,17 +1,17 @@
 # Use an official Python runtime as a parent image
 FROM python:3.10-slim
 
-# Set the working directory inside the container
+# Set the working directory
 WORKDIR /app
 
-# Copy the current directory contents into the container
+# Copy the current directory contents into the container at /app
 COPY . .
 
-# Install Flask and other dependencies
-RUN pip install --no-cache-dir flask python-dotenv
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port on which the Flask app will run
-EXPOSE 5000
+# Make sure the Python script is executable
+RUN chmod +x analysis.py
 
-# Command to run the Flask application
-CMD ["python", "analysis.py"]
+# Run the script when the container launches
+CMD ["python", "./analysis.py"]
