@@ -4,6 +4,9 @@
 #Getting the current time
 timestamp=$(date '+%Y-%m-%d %H:%M:%S')
 
+# Start the Python alert script in the background
+python3 ~/Desktop/analysis.py &
+
 while :
 do
     #Current CPU & memory usage state
