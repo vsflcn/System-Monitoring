@@ -36,3 +36,8 @@ def analize()
                     send_email(f"High Memory Usage at {timestamp}", f"Memory usage: {memory_usage} MB")
             except ValueError:
                 continue
+    
+
+    #Checks if the script is being run directly (not imported as a module)
+    if __name__ == "__main__":
+    analyze_log()
