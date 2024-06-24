@@ -32,3 +32,7 @@ def analize()
                 timestamp, cpu, mem = line.split(", ")
                 cpu_usage = float(cpu.split(": ")[1].replace('%', ''))
                 memory_usage = int(mem.split(": ")[1].replace(' MB', ''))
+                if cpu_usage > CPU_THRESHOLD:
+                    send_email(f"High Memory Usage at {timestamp}", f"Memory usage: {memory_usage} MB")
+            except ValueError:
+                continue
