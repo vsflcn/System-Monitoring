@@ -1,6 +1,7 @@
 # System Monitoring with Notifications
 
-This project implements a system monitoring solution for tracking system metrics (CPU, memory) using Bash scripts for data collection and Python for analysis and alert notifications via email or Slack.
+This project implements a system monitoring solution for tracking system metrics (CPU, memory) using Bash scripts for data collection and Python for analysis and alert notifications via email.
+
 
 ## Description
 
