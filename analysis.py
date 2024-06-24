@@ -18,6 +18,13 @@ MEMORY_THRESHOLD = int(os.getenv('MEMORY_THRESHOLD', 3024))
 # Log file path
 LOG_FILE_PATH = os.path.expanduser(os.getenv("~/Desktop/all_data.log"))
 
+
+# SMTP settings (using environment variables)
+SMTP_SERVER = os.getenv('SMTP_SERVER')
+SMTP_PORT = int(os.getenv('SMTP_PORT', 25))
+FROM_EMAIL = os.getenv('FROM_EMAIL')
+TO_EMAIL = os.getenv('TO_EMAIL')
+
 def send_email(subject, message):
     msg = MIMEtext(message)
     msg['Subject'] = subject
