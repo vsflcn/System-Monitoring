@@ -22,3 +22,9 @@ def send_email(subject, message):
         server.starttls()
         server.login(SMTP_USER, SMTP_PASSWORD)
         server.sendmail(FROM_EMAIL, TO_EMAIL, msg.as_string())
+
+def analize()
+    with open(LOG_FILE_PATH, 'r') as file:
+        for line in file:
+            if not line.strip():
+                continue
