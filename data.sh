@@ -11,4 +11,5 @@ do
     echo "Cpu Usage: $cpuUsage%"
     echo "Memory usage: $memUsage MB"
 
-    
+    #Sleep for 1 second
+    sleep 1
