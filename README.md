@@ -38,5 +38,4 @@ The project consists of two main components:
 ## Usage
 
 - The container will continuously monitor system performance.
-- Alerts are sent via email if CPU or memory usage exceeds thresholds.
-- Use the web interface to access logs or shut down the server.
+- Alerts are sent via disposable email if CPU or memory usage exceeds thresholds.
