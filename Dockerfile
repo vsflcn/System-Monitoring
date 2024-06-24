@@ -13,5 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Make sure the Python script is executable
 RUN chmod +x analysis.py
 
+# Expose the port
+EXPOSE 5000
+
 # Run the script when the container launches
 CMD ["python", "./analysis.py"]
