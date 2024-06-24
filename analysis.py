@@ -12,3 +12,10 @@ MEMORY_THRESHOLD = 3024  # in MB
 
 # Log file path
 LOG_FILE_PATH = os.path.expanduser("~/Desktop/all_data.log")
+
+def send_email(subject, message):
+    msg = MIMEtext(message)
+    msg['Subject'] = subject
+    msg['From'] = FROM_EMAIL
+    msg['To'] = TO_EMAIL
+   
