@@ -14,7 +14,10 @@ do
     echo "Cpu Usage: $cpuUsage%"
     echo "Memory usage: $memUsage MB"
 
+    echo "$timestamp, CPU usage: $cpuUsage%, Memory Usage: $memUsage MB" >> /HOME/Desktop/all_data.log"
+
     #Sleep for 1 second
     sleep 1
 done 
+
 
