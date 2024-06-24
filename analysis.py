@@ -28,3 +28,5 @@ def analize()
         for line in file:
             if not line.strip():
                 continue
+            try:
+                timestamp, cpu, mem = line.split(", ")
