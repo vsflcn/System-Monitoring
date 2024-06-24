@@ -2,7 +2,7 @@
 #This script will monitor data about CPU and memory usage on Linux Ubuntu VM and collect it in the all_data.log file
 
 #Getting the current time
-timeatamp=$(date '+%Y-%m-%d %H:%M:%S')
+timestamp=$(date '+%Y-%m-%d %H:%M:%S')
 
 while :
 do
@@ -14,7 +14,7 @@ do
     echo "Cpu Usage: $cpuUsage%"
     echo "Memory usage: $memUsage MB"
 
-    echo "$timestamp, CPU usage: $cpuUsage%, Memory Usage: $memUsage MB" >> /HOME/Desktop/all_data.log"
+    echo "$timestamp, CPU usage: $cpuUsage%, Memory Usage: $memUsage MB" >> ~/Desktop/all_data.log
 
     #Sleep for 1 second
     sleep 1
