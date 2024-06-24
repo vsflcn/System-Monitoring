@@ -2,6 +2,11 @@
 
 This project implements a system monitoring solution for tracking system metrics (CPU, memory) using Bash scripts for data collection and Python for analysis and alert notifications via email.
 
+## Skills Utilized
+- Data Collection
+- Bash Scripting
+- Python
+- API Integration
 
 ## Description
 
