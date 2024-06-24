@@ -30,3 +30,4 @@ def analize()
                 continue
             try:
                 timestamp, cpu, mem = line.split(", ")
+                cpu_usage = float(cpu.split(": ")[1].replace('%', ''))
