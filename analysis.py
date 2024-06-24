@@ -18,7 +18,6 @@ MEMORY_THRESHOLD = int(os.getenv('MEMORY_THRESHOLD', 3024))
 # Log file path
 LOG_FILE_PATH = os.path.expanduser(os.getenv("~/Desktop/all_data.log"))
 
-
 # SMTP settings (using environment variables)
 SMTP_SERVER = os.getenv('SMTP_SERVER')
 SMTP_PORT = int(os.getenv('SMTP_PORT', 25))
@@ -35,7 +34,13 @@ def send_email(subject, message):
         server.login(SMTP_USER, SMTP_PASSWORD)
         server.sendmail(FROM_EMAIL, TO_EMAIL, msg.as_string())
 
-def analize()
+@app.route('/')
+def index():
+    return 'Server is running!'
+
+@app.route('/analyze')
+
+def analize():
     with open(LOG_FILE_PATH, 'r') as file:
         for line in file:
             if not line.strip():
@@ -50,6 +55,6 @@ def analize()
                 continue
     
 
-    #Checks if the script is being run directly (not imported as a module)
-    if __name__ == "__main__":
-    analyze_log()
+#Checks if the script is being run directly (not imported as a module)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)
