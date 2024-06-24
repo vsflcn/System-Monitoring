@@ -1,4 +1,4 @@
-from flack import Flack
+from flask import Flask
 import os
 import smtplib
 from email.mime.text import MIMEtext
