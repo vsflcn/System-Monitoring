@@ -4,4 +4,4 @@
 while :
 do
     #Current CPU & memory usage state
-    cpuUsage=$(top -bn1 | awk '/Cpu/ { print $2}') 
+    cpuUsage=$(top -bn1 | awk '/Cpu/ { print $2}') # top command provides dynamic state of working OS in real time 
